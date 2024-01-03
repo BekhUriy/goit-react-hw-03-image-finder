@@ -7,7 +7,6 @@ import Modal from './Modal/Modal';
 import CustomLoader from './Loader/Loader';
 import './styles/styles.css';
 
-
 const App = () => {
   const [query, setQuery] = useState('');
   const [images, setImages] = useState([]);
@@ -15,6 +14,7 @@ const App = () => {
   const [largeImageURL, setLargeImageURL] = useState('');
   const [showModal, setShowModal] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [totalHits, setTotalHits] = useState(0);
 
   const handleSubmit = searchQuery => {
     setQuery(searchQuery);
@@ -45,6 +45,9 @@ const App = () => {
         const response = await axios.get(
           `https://pixabay.com/api/?q=${query}&page=${page}&key=40498232-0e7dac35b6ba9fe0d736e222d&image_type=photo&orientation=horizontal&per_page=12`
         );
+        if (page === 1) {
+          setTotalHits(response.data.totalHits);
+        }
         setImages(prevImages => [...prevImages, ...response.data.hits]);
       } catch (error) {
         console.error('Error fetching images: ', error);
@@ -61,7 +64,9 @@ const App = () => {
       <SearchBar onSubmit={handleSubmit} />
       <ImageGallery images={images} openModal={openModal} />
       {loading && <CustomLoader />}
-      {images.length > 0 && <Button onClick={handleLoadMore} />}
+      {images.length > 0 && images.length < totalHits && (
+        <Button onClick={handleLoadMore} />
+      )}{' '}
       {showModal && (
         <Modal largeImageURL={largeImageURL} closeModal={closeModal} />
       )}
