@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import '../styles/styles.css'
+import '../styles/styles.css';
 
 const Modal = ({ largeImageURL, closeModal }) => {
   const handleKeyDown = event => {
@@ -13,7 +13,7 @@ const Modal = ({ largeImageURL, closeModal }) => {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [closeModal]);
+  }, [closeModal, handleKeyDown]);
 
   const handleClick = event => {
     if (event.target === event.currentTarget) {
