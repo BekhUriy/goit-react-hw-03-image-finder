@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/bekhuriy.github.io/goit-react-hw-03-image-finder/static/css/main.7acaea2f.css",
-    "main.js": "/bekhuriy.github.io/goit-react-hw-03-image-finder/static/js/main.07d3183d.js",
+    "main.css": "/bekhuriy.github.io/goit-react-hw-03-image-finder/static/css/main.4b231ad0.css",
+    "main.js": "/bekhuriy.github.io/goit-react-hw-03-image-finder/static/js/main.dda67e71.js",
     "index.html": "/bekhuriy.github.io/goit-react-hw-03-image-finder/index.html",
-    "main.7acaea2f.css.map": "/bekhuriy.github.io/goit-react-hw-03-image-finder/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/bekhuriy.github.io/goit-react-hw-03-image-finder/static/js/main.07d3183d.js.map"
+    "main.4b231ad0.css.map": "/bekhuriy.github.io/goit-react-hw-03-image-finder/static/css/main.4b231ad0.css.map",
+    "main.dda67e71.js.map": "/bekhuriy.github.io/goit-react-hw-03-image-finder/static/js/main.dda67e71.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/css/main.4b231ad0.css",
+    "static/js/main.dda67e71.js"
   ]
 }
